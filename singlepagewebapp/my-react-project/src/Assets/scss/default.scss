@@ -1,0 +1,73 @@
+@import "config";
+
+.container-fluid{
+  display: inline-block;
+}
+
+.nav_bar{
+  font-size: 12px;
+  font-weight: bold;
+  float: right;
+}
+
+.sidebyside{display:flex; flex-direction:row;}
+
+body{
+  font-size: 14px;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+header{
+  position: relative;
+  display: block;
+  width: 100%;
+  background: black;
+  color: white;
+  height: 90px;
+  font-size: 20px;
+
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    @include translate(-50%);
+  }
+
+  nav, nav ul,nav ul li{
+    margin: 0;
+    padding: 0;
+  }
+
+  nav{
+    width: 20%;
+    position: absolute;
+    top: 50%; right: 15px;
+    @include translate(-50%);
+
+    ul li{
+      list-style: none;
+      display: inline-block;
+      margin-right: 20px;
+
+
+      &.last{
+        margin: 0;
+      }
+
+      a{
+        font-size: 19px;
+        line-height: normal;
+
+      }
+    }
+  }
+}
+
